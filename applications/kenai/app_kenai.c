@@ -600,7 +600,7 @@ static THD_FUNCTION(control_thread, arg) {
             float half_range_calc = range_limit / 2.0f;
             float sym_limit_calc  = half_range_calc - fabsf(center_trim_deg) - STOP_APPROACH_MARGIN_DEG;
             if (sym_limit_calc < 0.0f) sym_limit_calc = 0.0f; // guard: trim >= half_range (degenerate config)
-            if (sym_limit_calc > 93.0f) sym_limit_calc = 93.0f; // hard cap — never command more than ±93 deg from trimmed center, regardless of mechanical span
+            if (sym_limit_calc > 96.0f) sym_limit_calc = 96.0f; // hard cap — never command more than ±96 deg from trimmed center, regardless of mechanical span
             sym_limit_deg = sym_limit_calc;
         }
 
